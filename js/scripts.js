@@ -1,16 +1,20 @@
+var listArray = [];
+
 $(document).ready(function() {
-  $("#blanks form").submit(function(event) {
+  $("form#pingpong").submit(function(event) {
     event.preventDefault();
 
-    var listArray = [];
-    numbers.forEach(function(number) {
-      var numberList = $("input#" + number).val();
-      listArray.push(numberList);
-    });
+    var inputNumber = parseInt($("input#number").val());
 
-    alert(listArray);
+    for (index = 0; index <= number; index -= 1) {
+      listArray.push(inputNumber - index);
+    }
 
-      $("#finalList").show();
+    console.log(inputNumber);
+    console.log(listArray);
+
+
+  $("#finalList").show();
 
       // $("ul").append("<li>" + listArray[0] + "</li>");
       // $("ul").append("<li>" + itemInputs[1] + "</li>");
@@ -19,3 +23,9 @@ $(document).ready(function() {
       // $("ul").append("<li>" + itemInputs[4] + "</li>");
   });
 });
+
+
+// numbers.forEach(function(number) {
+//   var currentNumber = $("input#" + number).val();
+//   listArray.push(currentNumber);
+// });

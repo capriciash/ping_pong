@@ -1,6 +1,6 @@
 # _Ping Pong Number List_
 
-#### _Allows users to input a number and outputs a list of numbers, pings, pongs, and pingpongs, June 2016_
+#### _Turns a user inputted number into a list of numbers, pings, pongs, and pingpongs, June 2016_
 
 #### By _**Ashley Riehl**_
 
@@ -22,9 +22,9 @@ _This webpage allows users to enter a number.  The webpage then outputs an order
 * _It can replace all numbers divisible by 15 with "pingpong"._
   * _**Example Input:** 15_
   * _**Example Output:** [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "pingpong"]_
-* _When the inputs something that is not a number, it displays an alert asking the user that it is "not a valid number."_
+* _When the inputs something that is not a number, it displays an alert asking the user to "please enter a valid number."_
   * _**Example Input:** Hello_
-  * _**Example Output:** "Please enter a number"_
+  * _**Example Output:** "Please enter a number."_
 
 ## Known Bugs
 
