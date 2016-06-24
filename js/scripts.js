@@ -2,28 +2,39 @@ $(document).ready(function() {
   $("form#pingpong").submit(function(event) {
     event.preventDefault();
 
-    var inputNumber = parseInt($("input#number").val());
-
+//BUSINESS LOGIC
     var counts = [];
 
-    for (var index = 1; index <= inputNumber; index += 1) {
-      counts.push(index);
-    };
+//Take input from user
+    var inputNumber = parseInt($("input#number").val());
 
-    for (var index = 0; index <= inputNumber; index += 1) {
-      if ((counts[index] % 15 === 0)) {
-        counts[index] = "pingpong";
-      } else if (counts[index] % 3 === 0) {
-        counts[index] = "ping";
-      } else if (counts[index] % 5 === 0) {
-        counts[index] = "pong";
+//Create array form user input
+    for (var i = 1; i <= inputNumber; i += 1) {
+        counts.push(i);
+      };
+
+//Replace numbers with ping and pong
+    for (var i = 0; i <= inputNumber; i += 1) {
+      if ((counts[i] % 15 === 0)) {
+        counts[i] = "pingpong";
+      } else if (counts[i] % 3 === 0) {
+        counts[i] = "ping";
+      } else if (counts[i] % 5 === 0) {
+        counts[i] = "pong";
       }
     };
 
+//Deal with situations when user enters a number less than 1.
+    if (inputNumber < 1) {
+      alert("Please enter a number greater than 1.");
+    };
+
+//Refresh the list when the user submits another number.
     $("button.btn").click(function() {
       $("li.some").remove();
     });
 
+//Show the list and display the final array on the page
     counts.forEach(function(count) {
       $("ul#insert").append("<li class='some'>" + count + "</li>");
     });
