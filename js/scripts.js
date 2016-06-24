@@ -1,18 +1,16 @@
-var listArray = [];
-
 $(document).ready(function() {
   $("form#pingpong").submit(function(event) {
     event.preventDefault();
 
     var inputNumber = parseInt($("input#number").val());
 
-    for (index = 0; index <= number; index -= 1) {
-      listArray.push(inputNumber - index);
-    }
+    var listArray = [];
+    for (var index = 1; index <= inputNumber; index += 1) {
+      listArray.push(index);
+    };
 
     console.log(inputNumber);
     console.log(listArray);
-
 
   $("#finalList").show();
 
@@ -23,6 +21,8 @@ $(document).ready(function() {
       // $("ul").append("<li>" + itemInputs[4] + "</li>");
   });
 });
+
+
 
 
 // numbers.forEach(function(number) {
