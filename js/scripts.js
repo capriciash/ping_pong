@@ -21,11 +21,11 @@ $(document).ready(function() {
     };
 
     $("button.btn").click(function() {
-      $("li").remove();
+      $("li.some").remove();
     });
 
     counts.forEach(function(count) {
-      $("ul#insert").append("<li>" + count + "</li>");
+      $("ul#insert").append("<li class='some'>" + count + "</li>");
     });
 
     $(".sidebar").show();
