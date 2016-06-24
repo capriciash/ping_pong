@@ -18,11 +18,12 @@ $(document).ready(function() {
         counts[index] = "pong";
       }
     };
-
+    
+    $(".sidebar").show();
     $("#finalList").show();
 
     counts.forEach(function(count) {
-      $("ul").append("<li>" + count + "</li>");
+      $("ul#insert").append("<li>" + count + "</li>");
     });
 
   });

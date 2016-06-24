@@ -9,23 +9,37 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
-      <h1>Play Ping Pong!</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Ping Pong</h1>
+          <p><i>A quick and easy game to help you count with "ping" and "pong!"</i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div id="finalList">
+        <h3>Here's the list:</h3>
+        <ul id="insert"></ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h3>How to Play:</h3>
+      <ol>
+        <li></li>
+      </ol>
+
       <form id="pingpong">
         <div class="form-group">
           <label for="number">Enter a number:</label>
-          <input id="number" type="number">
+          <input id="number" type="number"></input>
         </div>
         <button type="submit" class="btn">Submit!</button>
       </form>
 
-      <div id="finalList">
-        <h3>Here's your list:</h3>
-        <ul></ul>
-      </div>
-
     </div>
-
 
   </body>
 </html>

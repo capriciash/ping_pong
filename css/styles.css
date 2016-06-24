@@ -1,3 +1,31 @@
-#finalList {
+#finalList, .sidebar {
   display: none;
+  position: center;
+}
+
+.col-md-12 {
+  background-color: #450a3c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #e1df5c;
+}
+
+.sidebar {
+  float: left;
+  background-color: #2d3969;
+  padding: 10px;
+  color: white;
+}
+
+.content {
+  padding: 10px;
+  border-color: green;
+  border-width: thick;
+  float: left;
+  color: black;
+}
+
+body {
+  background-color: #5d9ea4;
 }
