@@ -4,13 +4,23 @@ $(document).ready(function() {
 
     var inputNumber = parseInt($("input#number").val());
 
-    var listArray = [];
+    var counts = [];
     for (var index = 1; index <= inputNumber; index += 1) {
-      listArray.push(index);
+      counts.push(index);
+    };
+
+    for (var index = 0; index <= inputNumber; index += 1) {
+      if ((counts[index] % 15 === 0)) {
+        counts[index] = "pingpong";
+      } else if (counts[index] % 3 === 0) {
+        counts[index] = "ping";
+      } else if (counts[index] % 5 === 0) {
+        counts[index] = "pong";
+      }
     };
 
     console.log(inputNumber);
-    console.log(listArray);
+    console.log(counts);
 
   $("#finalList").show();
 
