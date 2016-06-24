@@ -10,6 +10,11 @@
   color: #e1df5c;
 }
 
+button {
+  background-color: #450a3c;
+  color: white;
+}
+
 .sidebar {
   float: left;
   background-color: #2d3969;

@@ -5,6 +5,7 @@ $(document).ready(function() {
     var inputNumber = parseInt($("input#number").val());
 
     var counts = [];
+
     for (var index = 1; index <= inputNumber; index += 1) {
       counts.push(index);
     };
@@ -18,21 +19,17 @@ $(document).ready(function() {
         counts[index] = "pong";
       }
     };
-    
-    $(".sidebar").show();
-    $("#finalList").show();
+
+    $("button.btn").click(function() {
+      $("li").remove();
+    });
 
     counts.forEach(function(count) {
       $("ul#insert").append("<li>" + count + "</li>");
     });
 
+    $(".sidebar").show();
+    $("#finalList").show();
+
   });
 });
-
-
-
-
-// numbers.forEach(function(number) {
-//   var currentNumber = $("input#" + number).val();
-//   listArray.push(currentNumber);
-// });
