@@ -19,16 +19,12 @@ $(document).ready(function() {
       }
     };
 
-    console.log(inputNumber);
-    console.log(counts);
+    $("#finalList").show();
 
-  $("#finalList").show();
+    counts.forEach(function(count) {
+      $("ul").append("<li>" + count + "</li>");
+    });
 
-      // $("ul").append("<li>" + listArray[0] + "</li>");
-      // $("ul").append("<li>" + itemInputs[1] + "</li>");
-      // $("ul").append("<li>" + itemInputs[2] + "</li>");
-      // $("ul").append("<li>" + itemInputs[3] + "</li>");
-      // $("ul").append("<li>" + itemInputs[4] + "</li>");
   });
 });
 
