@@ -8,6 +8,8 @@
 
 _This webpage provides a form for the users to enter and submit a number.  The webpage then stores an array of all of the integer between 0 and that number.  It replaces all of the number divisible by 3 with "ping", 5 with "pong", and 15 with "pingpong." Finally it outputs that array into a bulleted list on the webpage._
 
+_Check it out on Github:_ https://capriciash.github.io/ping_pong/
+
 ## Specifications
 
 * _It can count up to the provided number._
