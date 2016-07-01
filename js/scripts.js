@@ -1,40 +1,49 @@
+//BUSINESS LOGIC
+
+var counts = [];
+var inputNumber;
+
+var arrayMaker = function(number, array) {
+  for (var i = 1; i <= number; i += 1) {
+    array.push(i);
+  };
+};
+
+var pingPong = function(number, array) {
+  for (var i = 0; i <= number; i += 1) {
+    if ((array[i] % 15 === 0)) {
+      array[i] = "pingpong";
+    } else if (array[i] % 3 === 0) {
+      array[i] = "ping";
+    } else if (array[i] % 5 === 0) {
+      array[i] = "pong";
+    };
+  };
+};
+
+function numTest(number) {
+  if (number < 1) {
+    alert("Please enter a number greater than 1.");
+  };
+}
+
+function resetFields() {
+  $("input#number").val("");
+  counts = [];
+}
+
+
+// USER INTERFACE
 $(document).ready(function() {
   $("form#pingpong").submit(function(event) {
     event.preventDefault();
 
-//BUSINESS LOGIC
-    var counts = [];
-
-//Take input from user
     var inputNumber = parseInt($("input#number").val());
 
-//Create array form user input
-    for (var i = 1; i <= inputNumber; i += 1) {
-        counts.push(i);
-      };
+    arrayMaker(inputNumber, counts);
+    numTest(inputNumber);
+    pingPong(inputNumber, counts);
 
-//Replace numbers with ping and pong
-    for (var i = 0; i <= inputNumber; i += 1) {
-      if ((counts[i] % 15 === 0)) {
-        counts[i] = "pingpong";
-      } else if (counts[i] % 3 === 0) {
-        counts[i] = "ping";
-      } else if (counts[i] % 5 === 0) {
-        counts[i] = "pong";
-      }
-    };
-
-//Deal with situations when user enters a number less than 1.
-    if (inputNumber < 1) {
-      alert("Please enter a number greater than 1.");
-    };
-
-//Refresh the list when the user submits another number.
-    $("button.btn").click(function() {
-      $("li.some").remove();
-    });
-
-//Show the list and display the final array on the page
     counts.forEach(function(count) {
       $("ul#insert").append("<li class='some'>" + count + "</li>");
     });
@@ -42,5 +51,10 @@ $(document).ready(function() {
     $(".sidebar").show();
     $("#finalList").show();
 
+    $("button.btn").click(function() {
+      $("li.some").remove();
+    });
+
+    resetFields();
   });
 });
